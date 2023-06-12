@@ -1,0 +1,24 @@
+body{
+    margin: 0;
+}
+#event01{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 30px;
+    border: 1px dotted purple;
+    background-color: yellow;
+    font-size: 5px;    
+}
+header{
+    width: auto;
+    height: 100px;
+    background-color: yellowgreen;
+    border: 1px dotted red;
+}
+.header_1{
+    height: 50;
+    border: 1px dotted red;
+    display: inline;
+}
