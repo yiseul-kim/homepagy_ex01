@@ -5,31 +5,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Fruit world homepage </title>
     <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- 이벤트 영역 -->
     <div id="event01"> 할인문구 </div>
-    <header>
-        <p id="header_1">
-            <span id="logo">로고</span>
-            <a id="linked1">
-                <span><a href="#">분류</a></span>/
-                <span><a href="#">분류</a></span>
-            </a>
-            <span id="serch">검색어창</span>
-            <a id="information">
-                <span>로그인</span>/
-                <span>회원가입</span>/
-                <span>장바구니</span>
-            </a>
-        </p>
-        <p id="ss1">
+
+    <header>       
+        <div id="header_1">
+            <div id="logo_link">
+            <span id="logo">로고 </span>
+            <span id="linked1">
+                <a href="#"> 분류</a>/
+                <a href="#">분류</a>
+            </span>
+            </div>
+
+            <form>
+                <fieldset>
+                    <legend class="visually-hidden">검색</legend>
+                    <div class="serch_box">
+                        <input type="text"  maxlength="600" tabindex="1" />
+                        <button type="submit" tabindex="2">검색</button>
+                    </div>
+                </fieldset>
+            </form>
             
-        </p>
+            <div id="information">
+                <a href="#">로그인 </a>/
+                <a href="#"> 회원가입 </a>/
+                <a href="#"> 장바구니</a>/
+            </div>            
+        </div>
+
+
+        <ul class="MENU">
+            <li>카테고리
+                <ul class="submenu">
+                    <li><a href="#"> 1 </a></li>
+                    <li><a href="#"> 2 </a></li>
+                    <li><a href="#"> 3 </a></li>
+                    <li><a href="#"> 4 </a></li>
+                </ul>
+            </li>
+            <li>신상품
+                <ul class="submenu">
+                    <li><a href="#"> 1 </a></li>
+                    <li><a href="#"> 2 </a></li>
+                    <li><a href="#"> 3 </a></li>
+                    <li><a href="#"> 4 </a></li>
+                </ul>
+            </li>
+            <li>베스트
+                <ul class="submenu">
+                    <li><a href="#"> 1 </a></li>
+                    <li><a href="#"> 2 </a></li>
+                    <li><a href="#"> 3 </a></li>
+                    <li><a href="#"> 4 </a></li>
+                </ul>
+            </li>
+            <li>알뜰쇼핑
+                <ul class="submenu">
+                    <li><a href="#"> 1 </a></li>
+                    <li><a href="#"> 2 </a></li>
+                    <li><a href="#"> 3 </a></li>
+                    <li><a href="#"> 4 </a></li>
+                </ul>
+            </li>
+            <li>특가/혜택
+                <ul class="submenu">
+                    <li><a href="#"> 1 </a></li>
+                    <li><a href="#"> 2 </a></li>
+                    <li><a href="#"> 3 </a></li>
+                    <li><a href="#"> 4 </a></li>
+                </ul>
+            </li>
+        </ul>
     </header>
+
     <main>
 
     </main>
+    
     <footer>
 
     </footer>
