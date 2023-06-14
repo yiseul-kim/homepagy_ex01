@@ -1,125 +1,63 @@
-*{
-    margin: 0;
-    font-family: 'Gowun Dodum', sans-serif;
-}
-#event01{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+
+
+
+
+        /* 메인 */
+main{
     width: auto;
-    height: 30px;
-    background-color: yellow;
-    font-size: 5px;    
+    height: auto;
+    border: 1px solid purple;
+    overflow: hidden;
+}
+        /* 메인배너 */
+
+.kind_wrap {
+border:2px solid black; 
+width:100%; 
+max-width:800px; 
+margin:0 auto; 
+padding: 0;
+position: relative;
+}
+.kind_wrap > .kind_slider {
+overflow: hidden;
+}
+.kind_wrap > .kind_slider .slider { 
+position: relative; 
+transition: 0.5s;
+}
+.kind_wrap > .kind_slider .slider li {
+float:left;
+}
+.kind_wrap > .kind_slider img {
+vertical-align: top;
+}
+.kind_wrap .arrow > a.prev {
+position: absolute; 
+left:-50px; 
+top:100px;
+}
+.kind_wrap .arrow > a.next {
+position: absolute; 
+right:-50px; 
+top:100px;
 }
 
-        /* header 1 : 검색 */
 
-header {
-    /* 수평 가운데 정렬 */
-    height: 200px; 
-    /* 하위요소 가운데 정렬 */
-    align-items: center;    
+
+
+
+
+
+
+
+    /* <footer> */
+footer{
+    width: auto;
+    height: 100px;
     position: relative;
-    border: 1px solid red;
-  
+    bottom: 0px;
+    border: 1px solid blue;
 }
-#header_1 {
-    margin: 0;
-    padding: 0;
-    height: 50px;
-    border: 1px dotted rgb(0, 0, 0); 
-    align-items: center;
-    justify-content: center;
-   
-}
-
-#logo_link{    
-    position: absolute;
-    left: 0px;
-}
-#information{
-    position: absolute;
-    right: 0px;
-}
-div{
-    display: flex;
-}
-a {
-    text-decoration: none;
-    color: black;  
-}
-    
-
-        /* 검색어 창 */
-fieldset {
-    border: none; 
-  }
-.visually-hidden { /* legend 안보이게 설정. 이렇게하면 접근성을 준수하면서 디자인을 해치지 않습니다. */
-    position: absolute !important;
-    height: 1px;
-    width: 1px;
-    overflow: hidden;
-    clip: rect(1px 1px 1px 1px);
-    clip: rect(1px, 1px, 1px, 1px);
-    white-space: nowrap;
-  }
-  input{
-    width: 300px;
-  }
-  
-
-
-
-        /* header 2 : nav 대분류  */
-
-li{ list-style: none;}
-a { 
-    text-decoration: none;
-    text-align: center;    
-}
-ul{
-    padding-left: 0;
-}
-.MENU {
-    width: 100%;
-    overflow: hidden;
-    margin: 20px auto;
-    margin-top: 50px;
-    position: block;
-}
-.MENU > li {
-    width: 20%;
-    float: left;
-    text-align: center;
-    line-height: 40px;
-    background-color: gray;
-}
-.MENU a {
-    color: black;
-}
-
-.submenu > li {
-    line-height: 50px;
-    background-color: lightslategray;
-}
-.submenu {        
-    height: 0px;
-    overflow: hidden;   
-    text-align: center;
-}
-.submenu > li:hover {
-    background-color: rgb(151, 160, 168);
-}
-.MENU> li:hover {
-    background-color: lightslategray;;
-    transition: 0.1s;
-}
-.MENU > li:hover .submenu {
-    height: 200px;
-    transition: 1s;
-}
-
-
-
-
 
