@@ -7,7 +7,7 @@
     text-transform: uppercase;}
     
 #header-wrap {width: 100%;  /*background-color: #465881;*/}
-#banner-wrap {width: 100%; height: 300px; background-color: #00909E ;}
+#banner-wrap {width: 100%; height: 300px; /*background-color: #00909E ;*/}
 #contents-wrap {width: 100%; height: 500px; background-color: #C9D1D3 ;}
 #footer-wrap {width: 100%; height: 100px; background-color: #395a9c ;}
 
@@ -39,50 +39,122 @@
 
 
 /* 컨테이너 */
-.container {width: 990px; margin: 0 auto; height: inherit; /*background: rgba(255,255,255,0.3); */}
+.container {width: 990px; margin: 0 auto; height: inherit; background: rgba(255,255,255,0.3); }
 
  /* 헤더 */
- .header-container .header-menu{ text-align: right;  }
+ .header-container .header-menu{ text-align: right;  line-height: 30px;}
  .header-container .header-menu a {color: #373333; padding: 5px 0px 10px 13px; display: inline-block;
     font-size: small;}
  .header-container .header-menu a:hover {color:rgb(188, 215, 175);}
 
  /* 헤더2-검색어창  */
- .header-container .header-menu02 {}
- .header-container .header-menu02 #logo{}
- .header-container .header-menu02 #serch{}
- .header-container .header-menu02 .icon{}
- .header-container .header-menu02 .icon #icon1{}
- .header-container .header-menu02 .icon #icon2{}
- .header-container .header-menu02 .icon #icon3{}
+ .header-container .header-menu02 {overflow: hidden; font-size: x-small; line-height: 40px; }
+ .header-container .header-menu02 #logo{float: left; width: 100px;height: 40px; background-color: #98bcdc;}
+ .header-container .header-menu02 #serch{background-color: #a1a8aa;}
+ 
+ /* 헤더 아이콘 */
+ .header-container .header-menu02 .icon{float: right; width: 150px;height: 40px; background-color: #98bcdc;
+        text-align: right; }
+ .header-container .header-menu02 .icon a{ 
+    display:inline-block; background: url(../img/icon.png); margin: 0 3px;
+ }
+ .header-menu02 .icon .icon1{background-position:}
+ .header-menu02 .icon .icon2{background-position:}
+ .header-menu02 .icon .icon3{background-position:}
+ .header-menu02 .icon .icon1:hover{background-position:}
+ .header-menu02 .icon .icon2:hover{background-position:}
+ .header-menu02 .icon .icon3:hover{background-position:}
 
- /* .header-containerr .header-tit  {text-align: center; }
- .header-container .header-tit h1  { background: #4aa8d4; font-size: 28px; padding: 5px 20px 8px 20px; display: inline-block;
-    color: white; margin-top: 40px; font-weight: normal; text-transform: uppercase; }
-.header-container .header-tit a { display: inline-block; background: white; font-size: 18px; color: white;
-padding: 5px 20px 6px 20px; margin-top: -5px;} */
+/* 메인NAV */
+.header-nav {}
+.header-nav .menu { overflow: hidden; margin: 0  auto; }
+.header-nav .menu>li { list-style: none; width: 20%; float: left;text-align: center; line-height: 40px; background-color: #5778ff;}
+.header-nav .menu li a { text-decoration: none; color: white;}
+.header-nav .menu li .submenu {height: 0; overflow: hidden;}
+.header-nav .menu li .submenu li { line-height: 50px; background-color: #94a9ff ;}
+.header-nav .menu li .submenu li:hover{ background-color: #5778ff;}
+.header-nav .menu>li:hover{ background-color: #94a9ff; transition: 0.1s;}
+.header-nav .menu>li:hover .submenu{ height: 250px; transition: 1s;}
 
-/* 아이콘 */
+/* /header  */
+
+/* body */
+
+/* main slide banner */
+/* 배너 */
+[name="slide"] {display: none;}
+#banner-wrap .banner-wrap { }
+#banner-wrap .banner-wrap .slidebox { max-width: 1000px; width: 100%; margin: 0 auto; }
+.slidebox img {max-width: 100%;}
+.slidebox .slidelist {
+    white-space: nowrap;
+    font-size: 0;
+    overflow: hidden;
+}
+.slidebox .slideitem {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    transition: all .35s;
+}
+.slidebox .slideitem label {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 20PX;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.slidebox .slideitem label.left {
+    left: 20PX;
+    background-color: #5F5F5F;
+    background-image: url('../img/background-6360860_1280.png');
+    background-position: center center;
+    background-size: 50%;
+    background-repeat: no-repeat;
+}
+.slidebox .slideitem label.right {
+    right: 20PX;
+    background-color: #5F5F5F;
+    background-image: url('../img/background-6360860_1280.png');
+    background-position: center center;
+    background-size: 50%;
+    background-repeat: no-repeat;
+}
+[id="slide01"]:checked ~ .slidelist .slideitem {transform: translateX(0);
+    animation: slide01 15s infinite;}
+[id="slide02"]:checked ~ .slidelist .slideitem {transform: translateX(-100%);
+    animation: slide01 15s infinite;}
+[id="slide03"]:checked ~ .slidelist .slideitem {transform: translateX(-200%);
+    animation: slide01 15s infinite;}
+
+@keyframes slide01{
+    0% {left: 0%;}
+    30% {left: 0%;}
+    33% {left: -100%;}
+    63% {left: -100%;}
+    66% {left: -200%;}
+    96% {left: -200%;}
+    99% {left: -200%;}
+    100% {left: 0%;}
+}
 
 
-/* float: left로 인한 영역 깨짐(height:0) 방지법  
-    1. 깨지는 영역에 똑같이 float:left를 사용한다.(X) -> 모든 박스에 float:left를 사용하게 됨
-    2. float의 성질을 차단하는 clear: both;를 사용한다 (X) -> 어떤 영역이 깨졌는지 찾기 어려움
-    3. float을 사용한 상위 박스한테 overflow:hidden을 사용한다.  -> 제일 많이 사용
-    4. clearfix를 사용 -> 제일좋음 ! 반응형에서 많이 사용 
-*/
 
 
-/* 전체 메뉴  */
-.nav { overflow: hidden; padding-top: 30px 0;}
-.nav > div { float: left; width: 40%;}
-.nav > div:last-child {width: 20%;} /* ie9부터 사용 가능 */
-.nav > div.last {width: 20%;}   /* ie8까지 맞춰야 할때 사용 */
-.nav > div h3 {font-size: 18px; color: #25a2d0; margin-bottom: 4px;}
-.nav > div ol {overflow: hidden;}
-.nav > div ol li {float: left; width: 50%;}
-.nav > div ol li a:hover {text-decoration: underline;}
-.nav > div:last-child ol li {width: 100%;}
+
+
+/* .ban {position: relative; padding: 24px 0 20px;}
+.ban a.prev {position: absolute; left: -80px; top: 60px; width: 43px;height: 43px; 
+    background: url(../img/icon.png) no-repeat -150px 0; }
+.ban a.next {position: absolute; right: -80px; top: 60px; width: 43px; height: 43px; 
+    background: url(../img/icon.png) -150px -43px; }
+.ban a.prev:hover{background-position: -193px 0;}
+.ban a.next:hover{background-position: -193px -43px;} */
+
+
 
 /* 타이틀 */
 .tit { position: relative;}    /*아래 포지션의 기준점 역할이 됨*/
@@ -91,14 +163,7 @@ padding: 5px 20px 6px 20px; margin-top: -5px;} */
 .tit .btn {position: absolute; top: 5px; right: 0; width: 60px; height: 60px;
 background: url(../img/icon.png) no-repeat 0 -600px; }
 
-/* 배너 */
-.ban {position: relative; padding: 24px 0 20px;}
-.ban a.prev {position: absolute; left: -80px; top: 60px; width: 43px;height: 43px; 
-    background: url(../img/icon.png) no-repeat -150px 0; }
-.ban a.next {position: absolute; right: -80px; top: 60px; width: 43px; height: 43px; 
-    background: url(../img/icon.png) -150px -43px; }
-.ban a.prev:hover{background-position: -193px 0;}
-.ban a.next:hover{background-position: -193px -43px;}
+
 
 .ban ul {overflow: hidden;}
 .ban ul li { float: left;width: 330px;}
