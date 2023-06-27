@@ -1,7 +1,22 @@
 /* 한글 깨짐 방지 */
 @charset "utf-8";
 
-/* 스킵 내비게이션 - 마우스 작용이 어려운 사람을 위한 접근사용자*/
+
+*{padding: 0; margin: 0;}
+#wrap { color: white; text-align: center; line-height: 100px; font-size: 20px;
+    text-transform: uppercase;}
+    
+#header-wrap {width: 100%;  /*background-color: #465881;*/}
+#banner-wrap {width: 100%; height: 300px; background-color: #00909E ;}
+#contents-wrap {width: 100%; height: 500px; background-color: #C9D1D3 ;}
+#footer-wrap {width: 100%; height: 100px; background-color: #395a9c ;}
+
+.header-container {margin: 0 auto; width: 1000px; /*background-color: #2e3953;*/}
+.banner-wrap {margin: 0 auto; width: 1000px;  height: 300px; background-color: #02626b ;}
+.contents-wrap {margin: 0 auto; width: 1000px;  height: 500px; background-color: #a1a8aa;}
+.footer-wrap {margin: 0 auto; width: 1000px;  height: 100px; background-color: #263c68;}
+    
+    /* 스킵 내비게이션 - 마우스 작용이 어려운 사람을 위한 접근사용자*/
 #skip {position: relative;}
 #skip a { position: absolute; top: -70px; left: 0px; 
     border: 1px solid #fff; color: #fff; background: #333;
@@ -27,26 +42,28 @@
 .container {width: 990px; margin: 0 auto; height: inherit; /*background: rgba(255,255,255,0.3); */}
 
  /* 헤더 */
- .header .header-menu{ text-align: right; }
- .header .header-menu a {color: #fff; padding: 10px 0px 10px 13px; display: inline-block;}
- .header .header-menu a:hover {color: #666;}
- .header .header-tit  {text-align: center; }
- .header .header-tit h1  { background: #4aa8d4; font-size: 28px; padding: 5px 20px 8px 20px; display: inline-block;
+ .header-container .header-menu{ text-align: right;  }
+ .header-container .header-menu a {color: #373333; padding: 5px 0px 10px 13px; display: inline-block;
+    font-size: small;}
+ .header-container .header-menu a:hover {color:rgb(188, 215, 175);}
+
+ /* 헤더2-검색어창  */
+ .header-container .header-menu02 {}
+ .header-container .header-menu02 #logo{}
+ .header-container .header-menu02 #serch{}
+ .header-container .header-menu02 .icon{}
+ .header-container .header-menu02 .icon #icon1{}
+ .header-container .header-menu02 .icon #icon2{}
+ .header-container .header-menu02 .icon #icon3{}
+
+ /* .header-containerr .header-tit  {text-align: center; }
+ .header-container .header-tit h1  { background: #4aa8d4; font-size: 28px; padding: 5px 20px 8px 20px; display: inline-block;
     color: white; margin-top: 40px; font-weight: normal; text-transform: uppercase; }
-.header .header-tit a { display: inline-block; background: #2698cb; font-size: 18px; color: white;
-padding: 5px 20px 6px 20px; margin-top: -5px;}
+.header-container .header-tit a { display: inline-block; background: white; font-size: 18px; color: white;
+padding: 5px 20px 6px 20px; margin-top: -5px;} */
 
 /* 아이콘 */
-.header .header-icon {text-align: center; margin-top: 30px;}
-.header .header-icon a {width: 60px; height: 60px; display:inline-block; background: url(../img/icon.png); margin: 0 3px;}
-.header .header-icon a.icon1 {background-position: 0 0;}
-.header .header-icon a.icon2 {background-position: 0 -60px;}
-.header .header-icon a.icon3 {background-position: 0 -120px;}
-.header .header-icon a.icon4 {background-position: 0 -180px;}
-.header .header-icon a.icon1:hover {background-position: -60px 0;}
-.header .header-icon a.icon2:hover {background-position: -60px -60px;}
-.header .header-icon a.icon3:hover {background-position: -60px -120px;}
-.header .header-icon a.icon4:hover {background-position: -60px -180px;}
+
 
 /* float: left로 인한 영역 깨짐(height:0) 방지법  
     1. 깨지는 영역에 똑같이 float:left를 사용한다.(X) -> 모든 박스에 float:left를 사용하게 됨
