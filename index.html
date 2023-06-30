@@ -31,7 +31,12 @@
 
                     <a href="#" id="logo">로고</a>
 
-                    <a href="#" id="serch">검색창</a>
+                    <a href="#" id="serch">
+                        <div>
+                            <input type="text" placeholder="검색어 입력" size=50 maxlength="50" >
+                            <button>검색</button>
+                        </div>
+                    </a>
                 
                     <div class="icon">
                         <a href="#" class="icon1"><span class="ir_pm">아이콘1</span></a>
@@ -43,7 +48,7 @@
                 <div class="header-nav">
                     <ul class="menu">
                         <li><a href="#">MENU 1</a>    <!-- 상위 메뉴 -->
-                            <ul class="submenu">                <!-- 하위 메뉴 -->
+                            <ul class="submenu">      <!-- 하위 메뉴 -->
                                 <li><a href="#">submenu 01</a></li>
                                 <li><a href="#">submenu 02</a></li>
                                 <li><a href="#">submenu 03</a></li>
@@ -136,9 +141,14 @@
         <!-- /banner -->
         <div id="contents-wrap">
             <div class="contents-wrap">
-                <h2>지금 뜨고있는 제품</h2>
-                <div class="small_slide">
-                    <div class="slider_wrapper">
+                <h2>지금 뜨고있는 제품</h2>                
+                <div class="small_slide"> 
+                                      
+                    <div class="slider_wrapper"> 
+                        <p class="controls">
+                            <label for="slide_left" class="prev"></label>
+                            <label for="slide_next" class="next"></label>
+                        </p>                                               
                         <ul class="slides">
                           <li><img src="http://placehold.it/200" alt=""></li>
                           <li><img src="http://placehold.it/200" alt=""></li>
@@ -149,13 +159,15 @@
                           <li><img src="http://placehold.it/200" alt=""></li>
                           <li><img src="http://placehold.it/200" alt=""></li>    
                         </ul>
-                      </div>
-                      <p class="controls">
-                          <span class="prev">prev</span>
-                          <span class="next">next</span>
-                        </p>
+                      </div>                      
                 </div>
                 <!-- /small_slide -->
+                <div class="event_big"></div>
+                <div class="event">
+                    <div class="event1"><a href="#"></a></div>
+                    <div class="event2"></div>
+                    <div class="event3"></div>
+                </div>
             </div>
             <!-- contents-wrap -->
         </div>

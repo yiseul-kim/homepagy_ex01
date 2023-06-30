@@ -21,14 +21,10 @@ var slides = document.querySelector('.slides'),
         }        
     });
 
-    function moveSlide(num){
-        slides.style.left= num*230+'px';
-        currentIdx = num;
-    }
     prevBtn.addEventListener('click',function(){
         if(currentIdx>0){
             moveSlide(currentIdx-1);
         } else {
-            moveSlide(slideCount);
-        }        
+            moveSlide(slideCount-4);
+        }       
     });

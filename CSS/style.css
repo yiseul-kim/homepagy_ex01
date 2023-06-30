@@ -8,7 +8,7 @@
     
 #header-wrap {width: 100%;  /*background-color: #465881;*/}
 #banner-wrap {width: 100%; height: 300px; /*background-color: #00909E ;*/}
-#contents-wrap {width: 100%; height: 500px; background-color: #C9D1D3 ;}
+#contents-wrap {width: 100%; height: 500px; /*background-color: #C9D1D3 ;*/}
 #footer-wrap {width: 100%; height: 100px; background-color: #395a9c ;}
 
 .header-container {margin: 0 auto; width: 1000px; /*background-color: #2e3953;*/}
@@ -51,6 +51,16 @@
  .header-container .header-menu02 {overflow: hidden; font-size: x-small; line-height: 40px; }
  .header-container .header-menu02 #logo{float: left; width: 100px;height: 40px; background-color: #98bcdc;}
  .header-container .header-menu02 #serch{background-color: #a1a8aa;}
+ .header-menu02 #serch > div { height: 36px; width: 400px; border: 3px solid #1b5ac2; padding: 10px;
+            background: #ffffff; display: inline;}
+ .header-menu02 #serch input { font-size: 16px; height: 100%; width: 325px; border: 0px; 
+    outline: none; }
+ .header-menu02 #serch button { width: 50px;height: 100%; border: 0; 
+    background: #1b5ac2; outline: none; color: #ffffff;}
+
+    .header-menu02 input:-ms-input-placeholder {color:#a8a8a8;}
+    .header-menu02 input::-webkit-input-placehoder {color : #a8a8a8;}
+    .header-menu02 input::-moz-placeholder{color: #a8a8a8;}
  
  /* 헤더 아이콘 */
  .header-container .header-menu02 .icon{float: right; width: 150px;height: 40px; background-color: #98bcdc;
@@ -161,16 +171,37 @@
     float:left;
     margin-right:30px;
   }
-  .controls{text-align:center; margin-top: 50px;}
-  .controls span{
+  .controls{text-align:center; margin-top: 50px; overflow: hidden;}
+  .controls label{
     background:#333;
     color: #fff;
-    padding: 10px 20px;
-    margin: 0 10px;
-
+    padding: 0;
+    margin: 0 ;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    transform: translateY(0%);
+    padding: 20PX;
+    border-radius: 50%;
+    cursor: pointer;
   }
-  .controls span.prev{right:calc(100%+50px);}
-  .controls span.next{left:calc(100%+50px);}
+  .contents-wrap.small_slide{overflow: hidden;}
+  .controls label.prev{
+    left: 10PX;
+    background-color: #5F5F5F;
+    background-image: url('../img/background-6360860_1280.png');
+    background-position: center center;
+    background-size: 50%;
+    background-repeat: no-repeat;
+  }
+  .controls label.next{
+    right: 10PX;
+    background-color: #5F5F5F;
+    background-image: url('../img/background-6360860_1280.png');
+    background-position: center center;
+    background-size: 50%;
+    background-repeat: no-repeat;
+}
   
 
 
