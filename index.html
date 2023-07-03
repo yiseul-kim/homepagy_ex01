@@ -4,18 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!-- css style -->
+     <!-- css style  -->
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    
     <!-- web font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+    
+    <!-- java script -->
     <script defer src="JS/index.js"></script>
+    
+
 </head>
 <body>
     <!-- 마우스 이동이 어려운 사람을 위한 스킵내비게이션 -->
     <div id="skip">
-        <a href="#content-nav">전체메뉴 바로가기</a>
-        <a href="#cont-ban">배너영역 바로가기</a>
-        <a href="#con-cont">컨텐츠영역 바로가기</a>
+        <a href="#header-nav">전체메뉴 바로가기</a>
+        <a href="#banner-wrap">배너영역 바로가기</a>
+        <a href="#contents-wrap">컨텐츠 바로가기</a>
     </div>
     
     <div id="wrap">
@@ -28,8 +36,11 @@
                     <a href="#">고객센터</a>
                 </div>
                 <div class="header-menu02">
-
-                    <a href="#" id="logo">로고</a>
+                    <div class="mainlogo">
+                        <a href="#" id="logo">
+                            <img src="../홈페이지/img/로고.JPG" alt="메인로고">
+                        </a>
+                    </div>
 
                     <a href="#" id="serch">
                         <div>
@@ -47,39 +58,39 @@
                 <!-- /header-menu -->
                 <div class="header-nav">
                     <ul class="menu">
-                        <li><a href="#">MENU 1</a>    <!-- 상위 메뉴 -->
+                        <li><a href="#">과일</a>    <!-- 상위 메뉴 -->
                             <ul class="submenu">      <!-- 하위 메뉴 -->
-                                <li><a href="#">submenu 01</a></li>
-                                <li><a href="#">submenu 02</a></li>
-                                <li><a href="#">submenu 03</a></li>
-                                <li><a href="#">submenu 04</a></li>        
-                                <li><a href="#">submenu 05</a></li>        
+                                <li><a href="#">친환경과일</a></li>
+                                <li><a href="#">제철과일</a></li>
+                                <li><a href="#">국산과일</a></li>
+                                <li><a href="#">수입과일</a></li>        
+                                <li><a href="#">간편과일</a></li>        
                             </ul>   
                         </li> 
                         <!--/ 상위 메뉴1 -->
-                        <li><a href="#">MENU 2</a>    
+                        <li><a href="#">채소</a>    
                             <ul class="submenu">               
-                                <li><a href="#">submenu 01</a></li>
-                                <li><a href="#">submenu 02</a></li>
-                                <li><a href="#">submenu 03</a></li>
-                                <li><a href="#">submenu 04</a></li>        
-                                <li><a href="#">submenu 05</a></li>        
+                                <li><a href="#">친환경채소</a></li>
+                                <li><a href="#">콩나물&버섯</a></li>
+                                <li><a href="#">시금치&쌈채소&나물</a></li>
+                                <li><a href="#">오이&호박&고추</a></li>        
+                                <li><a href="#">고구마&감자&당근</a></li>        
                             </ul>   
                         </li> 
                         <!--/ 상위 메뉴2 -->
-                        <li><a href="#">MENU 3</a>   
+                        <li><a href="#">선물상점</a>   
                             <ul class="submenu">               
-                                <li><a href="#">submenu 01</a></li>
-                                <li><a href="#">submenu 02</a></li>
-                                <li><a href="#">submenu 03</a></li>
-                                <li><a href="#">submenu 04</a></li>        
-                                <li><a href="#">submenu 05</a></li>        
+                                <li><a href="#">1만원대</a></li>
+                                <li><a href="#">2만원대</a></li>
+                                <li><a href="#">3만원대</a></li>
+                                <li><a href="#">4만원대</a></li>        
+                                <li><a href="#">5만원이상</a></li>        
                             </ul>   
                         </li> 
                         <!--/ 상위 메뉴3 -->
-                        <li><a href="#">MENU 4</a>    
-                            <ul class="submenu">               
-                                <li><a href="#">submenu 01</a></li>
+                        <li ><a href="#">신상품</a>    
+                            <ul class="submenu" id="sub1">               
+                                <li><a href="#">이주의 신상품</a></li>
                                 <li><a href="#">submenu 02</a></li>
                                 <li><a href="#">submenu 03</a></li>
                                 <li><a href="#">submenu 04</a></li>        
@@ -87,8 +98,8 @@
                             </ul>   
                         </li> 
                         <!--/ 상위 메뉴4 -->
-                        <li><a href="#">MENU 5</a>    
-                            <ul class="submenu">                
+                        <li ><a href="#">알뜰쇼핑</a>    
+                            <ul class="submenu" id="sub2">                
                                 <li><a href="#">submenu 01</a></li>
                                 <li><a href="#">submenu 02</a></li>
                                 <li><a href="#">submenu 03</a></li>
@@ -116,21 +127,21 @@
                             <div>
                                 <label for="slide03" class="left"></label>
                                 <label for="slide02" class="right"></label>
-                                <a><img src="./img/메인배너 1 .png" alt="배너1"></a>
+                                <a><img src="./img/배너001 (1).jpg" alt="배너1"></a>
                             </div>
                         </li>
                         <li class="slideitem">
                             <div>
                                 <label for="slide01" class="left"></label>
                                 <label for="slide03" class="right"></label>
-                                <a><img src="./img/메인배너2 .png" alt="배너2"></a>
+                                <a><img src="./img/배너001 (2).jpg" alt="배너2"></a>
                             </div>
                         </li>
                         <li class="slideitem">
                             <div>
                                 <label for="slide02" class="left"></label>
                                 <label for="slide01" class="right"></label>
-                                <a><img src="./img/메인배너3 .png" alt="배너3"></a>
+                                <a><img src="./img/배너001 (3).jpg" alt="배너3"></a>
                             </div>
                         </li>
                     </ul>
@@ -142,38 +153,52 @@
         <div id="contents-wrap">
             <div class="contents-wrap">
                 <h2>지금 뜨고있는 제품</h2>                
-                <div class="small_slide"> 
-                                      
+                <div class="small_slide">                                       
                     <div class="slider_wrapper"> 
                         <p class="controls">
                             <label for="slide_left" class="prev"></label>
                             <label for="slide_next" class="next"></label>
                         </p>                                               
                         <ul class="slides">
-                          <li><img src="http://placehold.it/200" alt=""></li>
-                          <li><img src="http://placehold.it/200" alt=""></li>
-                          <li><img src="http://placehold.it/200" alt=""></li>
-                          <li><img src="http://placehold.it/200" alt=""></li>
-                          <li><img src="http://placehold.it/200" alt=""></li>
-                          <li><img src="http://placehold.it/200" alt=""></li>
-                          <li><img src="http://placehold.it/200" alt=""></li>
-                          <li><img src="http://placehold.it/200" alt=""></li>    
+                          <li><a href="#"><img src="./img/메뉴 (1).jpg" alt=""></a></li>
+                          <li><a href="#"><img src="./img/메뉴 (2).jpg" alt=""></a></li>
+                          <li><a href="#"><img src="./img/메뉴 (3).jpg" alt=""></a></li>
+                          <li><a href="#"><img src="./img/메뉴 (4).jpg" alt=""></a></li>
+                          <li><a href="#"><img src="./img/메뉴 (5).jpg" alt=""></a></li>
+                          <li><a href="#"><img src="./img/메뉴 (6).jpg" alt=""></a></li>
+                          <li><a href="#"><img src="./img/메뉴 (7).jpg" alt=""></a></li>
+                          <li><a href="#"><img src="./img/메뉴 (8).jpg" alt=""></a></li>
                         </ul>
                       </div>                      
                 </div>
                 <!-- /small_slide -->
-                <div class="event_big"></div>
                 <div class="event">
-                    <div class="event1"><a href="#"></a></div>
-                    <div class="event2"></div>
-                    <div class="event3"></div>
+                    <div class="event_big">
+                      <a href="#" class="event_big1"><span class="ir_pm">이벤트1</span></a>
+                    </div>
+                    <ul class="event_small">
+                      <li class="evnt1"><a href="#"><span class="ir_pm">이벤트2</span></a></li>
+                      <li class="evnt2"><a href="#"><span class="ir_pm">이벤트3</span></a></li>
+                      <li class="evnt3"><a href="#"><span class="ir_pm">이벤트4</span></a></li>
+                    </ul>
                 </div>
+                <!--/event-->
             </div>
             <!-- contents-wrap -->
         </div>
         <!-- /contents -->
         <div id="footer-wrap">
-            <div class="footer-wrap">footer</div>
+            <div class="footer-wrap">
+                <a href="#" class="footer_main"><span class="ir_pm">회사정보</span></a>
+                <div class="footer_log">
+                    <ul>
+                        <li class="snslink1"><a href="https://ko-kr.facebook.com/"><span class="ir_pm">페이스북</span></a></li>
+                        <li class="snslink2"><a href="https://www.instagram.com/"><span class="ir_pm">인스타그램</span></a></li>
+                        <li class="snslink3"><a href="https://section.blog.naver.com/BlogHome.naver?directoryNo=0&currentPage=1&groupId=0"><span class="ir_pm">네이버블로그</span></a></li>
+                    </ul>
+                </div>
+                <!-- /footer_log -->
+            </div>
         </div>
         <!-- /footer -->
     </div>
